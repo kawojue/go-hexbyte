@@ -6,8 +6,8 @@ import (
 )
 
 func GenerateRandomHexString(numBytes int) string {
-	randomBytes := make([]byte, numBytes)
-	_, err := rand.Read(randomBytes)
+	randomBytes, err := GenerateRandomBytes(numBytes)
+
 	if err != nil {
 		panic(err)
 	}
